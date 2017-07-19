@@ -24,7 +24,11 @@ if ($b < $c) {
 // identical, equal, not equal/identical
 if ($b === $c) {
     echo "$b is identical to $c\n";
+<<<<<<< HEAD
 } else if ($b == $c){
+=======
+} else if {
+>>>>>>> 2b5acf964f7ed2c3e37e0af97a65138880bf9ebd
     echo "$b is equal to $c\n";
 } else {
     echo "$b is not equal to $c\n";
