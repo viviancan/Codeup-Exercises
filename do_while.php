@@ -2,7 +2,7 @@
 	$a = 2;
 	do {
 
-		echo "{$a}"\n;
+		echo $a .PHP_EOL;
 
 		$a *= $a;
 
