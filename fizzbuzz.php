@@ -7,20 +7,19 @@
 		// echo $i . PHP_EOL;
 
 		if($i % 3 == 0 && $i % 5 ==0){
-			echo "FizzBuzz" . PHP_EOL;
+			echo "FizzBuzz";
 
 		} else if($i % 5 == 0){
-			echo "Buzz" . PHP_EOL;
+			echo "Buzz";
 
 		} else if($i % 3 == 0){
-			echo "Fizz" . PHP_EOL;
+			echo "Fizz";
 
 		} else{
-			echo $i . PHP_EOL;
+			echo $i ;
 		}
-
+		echo  PHP_EOL;
 	}
-
 
 
 
