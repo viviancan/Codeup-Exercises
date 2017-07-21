@@ -31,15 +31,47 @@ about each book.*/
 
 // var_dump( $books);
 
-foreach($books as $key => $book){
-	echo "Title: $key\n";
+// foreach($books as $key => $book){
+// 	echo "Title: $key\n";
 
-	foreach ($book as $key => $value){
-		echo "$key: $value\n";
+// 	foreach ($book as $key => $details){
+// 		echo "$key: $details\n";
+// 	}
+// echo PHP_EOL;
+// }
+
+
+foreach($books as $title => $book){
+	if($book['published']>1950){
+		echo "Title: $title\n";	
+
+		foreach ($book as $key => $details){
+			echo "$key: $details\n";
+		}
+	echo "===========================" . PHP_EOL;
+
 	}
-echo PHP_EOL;
+
 }
 
+
+
+
+
+
+/*
+BONUSES:
+1) Update loop to only include books with less than 300 pages
+2) Create a new loop that outputs the average page length and year of publication of the books in the books array 
+3) Add the following entry to the $books array:
+    'Lord of the Rings' => array(
+        'published' => 1968,
+        'author' => 'J. R. R. Tolkien',
+        'pages' => 1178
+    )
+Construct another loop that iterates through each book as in the exercise step 2 
+but the loop should only list the first book of a given author in the books array.
+*/
 
 
 
