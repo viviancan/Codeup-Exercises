@@ -28,8 +28,46 @@ switch($dayOfWeek) {
 		break;
 	case 7:
 		echo "Sunday";
-		break;
-	 
+		break;	 
 }
 
 echo PHP_EOL;
+
+
+
+if($dayOfWeek == 1){
+	echo "Monday";
+
+} elseif ($dayOfWeek == 2) {
+	echo "Tuesday";
+	
+} elseif ($dayOfWeek == 3) {
+	echo "Wednesday";
+	
+} elseif ($dayOfWeek == 4) {
+	echo "Thursday";
+
+} elseif ($dayOfWeek == 5) {
+	echo "Friday";
+
+} elseif ($dayOfWeek == 6) {
+	echo "Saturday";
+
+} elseif ($dayOfWeek == 7) {
+	echo "Sunday";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
