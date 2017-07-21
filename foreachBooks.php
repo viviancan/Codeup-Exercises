@@ -41,18 +41,18 @@ about each book.*/
 // }
 
 
-foreach($books as $title => $book){
-	if($book['published']>1950){
-		echo "Title: $title\n";	
+// foreach($books as $title => $book){
+// 	if($book['published']>1950){
+// 		echo "Title: $title\n";	
 
-		foreach ($book as $key => $details){
-			echo "$key: $details\n";
-		}
-	echo "===========================" . PHP_EOL;
+// 		foreach ($book as $key => $details){
+// 			echo "$key: $details\n";
+// 		}
+// 	echo "===========================" . PHP_EOL;
 
-	}
+// 	}
 
-}
+// }
 
 
 
@@ -72,6 +72,34 @@ BONUSES:
 Construct another loop that iterates through each book as in the exercise step 2 
 but the loop should only list the first book of a given author in the books array.
 */
+
+//Bonus 1 - Update loop to only include books with less than 300 pages
+// foreach($books as $title => $book){
+// 	if($book['pages'] < 300){
+// 		echo "Title: $title\n";	
+
+// 		foreach ($book as $key => $details){
+// 			echo "$key: $details\n";
+// 		}
+// 	echo "===========================" . PHP_EOL;
+
+// 	}
+// }
+
+//Bonus 2- Create a new loop that outputs the average page length and year of publication of the books in the books array 
+
+$pageAverage = 0; 
+$pubYear = 0; 
+
+foreach ($books as $title => $book) {
+	$pageAverage += $book['pages'] ;
+	$pubYear += $book['published'];
+
+}
+	 echo "Page Average: " . $pageAverage/4 . PHP_EOL;
+	 echo "Publication Year Average: " . round($pubYear/4) . PHP_EOL;
+
+
 
 
 
