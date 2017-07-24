@@ -61,10 +61,10 @@ foreach ($companies as $company => $personnel) {
 	sort($personnel);
 	$companies[$company] = $personnel;
 }
-// print_r($companies);
+print_r($companies);
 
 
 //#5 - Sort the companies from "biggest" to "smallest". This may be easier than you think, but be sure you don't loose the company names!
-arsort($companies);
-print_r($companies);
+// arsort($companies);
+// print_r($companies);
 
