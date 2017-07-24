@@ -52,7 +52,7 @@ function numberOfValuesInCommon($array1, $array2)
 }
 
 
-echo numberOfValuesInCommon($names, $compare) . PHP_EOL; 
+echo "The number of values in common is: " . numberOfValuesInCommon($names, $compare) . PHP_EOL; 
 
 
 
