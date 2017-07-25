@@ -22,11 +22,10 @@ $phyArray = explode(", " , $physicistsString);
 // {
 // 	$lastItem = array_pop($array);
 
-// 	array_push($array, " and" . $lastItem);
+// 	array_push($array, "and " . $lastItem);
 
-// 	$physicistsString = implode("," , $array);
+// 	return implode(", " , $array);
 
-// 	return $physicistsString;
 // }
 
 // $famousFakePhysicists = humanizedList($phyArray);
@@ -41,11 +40,10 @@ $phyArray = explode(", " , $physicistsString);
 	
 // 	$lastItem = array_pop($array);
 
-// 	array_push($array, " and " . $lastItem);
+// 	array_push($array, "and " . $lastItem);
 
-// 	$physicistsString = implode("," , $array);
+// 	return implode(", " , $array);
 
-// 	return $physicistsString;
 // }
 
 // $famousFakePhysicists = humanizedList($phyArray);
@@ -61,17 +59,15 @@ function humanizedList($array , $sort = false)
 	}
 
 	$lastItem = array_pop($array);
-	array_push($array, " and " . $lastItem);
+	array_push($array, "and " . $lastItem);
 
-	$physicistsString = implode("," , $array);
-
-	return $physicistsString;
+	return implode(", " , $array); 
 
 }
 
 $famousFakePhysicists = humanizedList($phyArray);
 
-echo "Some of the most famous fictional theoretical physicists are{$famousFakePhysicists}." . PHP_EOL;
+echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}." . PHP_EOL;
 
 /*=======================================================================================*/
 //BONUS EXERCISE 1 Write a function to remove all the vowels from the following array 
