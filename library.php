@@ -20,18 +20,23 @@ function isVowel($input)
 
 }
 
+
 //Write a function called "first" that takes in an argument that could be an array or a string. Return the first character if the argument is a string. Return the first element of the array if the input is an array.
 
 function first($input)
 {
-	return $input[0];
+	if(is_string($inpu) || is_array($input)){
+		return $input[0];
+	}
 }
 
 //Write a function called "second" that takes in input that could be an array or a string. The function should return the second character or element of the input.
 
 function second($input)
 {
-	return $input[1];
+	if(is_string($inpu) || is_array($input)){
+		return $input[1];
+	}
 
 }
 
@@ -73,8 +78,6 @@ function random($input)
 	}
 
 }
-
-
 
 
 
