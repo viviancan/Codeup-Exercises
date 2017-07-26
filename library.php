@@ -3,16 +3,18 @@
 
 function isEven($input)
 {
-	if($input % 2 === 0 ){
-		return true; 
-	} else {
+	if(is_numeric($input)){
+		if($input % 2 === 0 ){
+			return true; 
+		} else {
+			return false;
+		}	
+	} else{
 		return false;
 	}
 }
 
 //Write a function called isVowel that returns true or false if the provided input is the letter 'a', 'e', 'i', 'o', or 'u'
-
-isVowel("e");
 
 function isVowel($input)
 {
@@ -20,9 +22,7 @@ function isVowel($input)
 
 	return in_array($input, $vowels);
 
-
 }
-
 
 //Write a function called "first" that takes in an argument that could be an array or a string. Return the first character if the argument is a string. Return the first element of the array if the input is an array.
 
@@ -31,7 +31,6 @@ function first($input)
 	return $input[0];
 }
 
-
 //Write a function called "second" that takes in input that could be an array or a string. The function should return the second character or element of the input.
 
 function second($input)
@@ -39,7 +38,6 @@ function second($input)
 	return $input[1];
 
 }
-
 
 //Write a function called "last" that takes in an input that could be an array or a string. Your function should return the last character or element of the input.
 
@@ -52,7 +50,6 @@ function last($input)
 		return end($input);
 }
 
-
 //Write a function called "reverse" that takes in an input of either a string or an array. Your function should return the elements or characters in reverse order.
 
 function reverse($input)
@@ -63,7 +60,6 @@ function reverse($input)
 	} elseif (is_array($input))
 		return array_reverse($input);
 }
-
 
 //Write a function called "random" that takes in an input that can be either a string or an array. Your function should return a random element or character from the input.
 
@@ -77,10 +73,8 @@ function random($input)
 		$length = strlen($input);
 		$random = rand(0, $length -1);
 
-		echo substr($input, $random, 1);
-
+		return substr($input, $random, 1);
 	}
-
 
 }
 
