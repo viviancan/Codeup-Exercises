@@ -4,11 +4,7 @@
 function isEven($input)
 {
 	if(is_numeric($input)){
-		if($input % 2 === 0 ){
-			return true; 
-		} else {
-			return false;
-		}	
+		return $input % 2 === 0;	
 	} else{
 		return false;
 	}
