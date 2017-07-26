@@ -14,7 +14,7 @@ function isEven($input)
 
 function isVowel($input)
 {
-	$vowels = ['a', 'e', 'i', 'o', 'u'];
+	$vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
 	return in_array($input, $vowels);
 
@@ -25,7 +25,7 @@ function isVowel($input)
 
 function first($input)
 {
-	if(is_string($inpu) || is_array($input)){
+	if(is_string($input) || is_array($input)){
 		return $input[0];
 	}
 }
@@ -34,7 +34,7 @@ function first($input)
 
 function second($input)
 {
-	if(is_string($inpu) || is_array($input)){
+	if(is_string($input) || is_array($input)){
 		return $input[1];
 	}
 
@@ -78,11 +78,6 @@ function random($input)
 	}
 
 }
-
-
-
-
-
 
 
 
