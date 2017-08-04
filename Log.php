@@ -8,17 +8,32 @@ class Log
 
 	public $handle; 
 
+	public function _construct($prefix = "log")
+	{
+		$this->filename = $prefix . date("-Y-m-d") . ".log";
+
+		$this->handle = fopen($this->filename, 'a');
+
+	}
+
+	public function _destruct()
+	{
+		fclose($this->handle);
+	}
+
 	public function logMessage($logLevel, $message)
 	{
-		$this->filename = "log" . date("-Y-m-d") . ".log";
+		// $this->filename = "log" . date("-Y-m-d") . ".log";
 
-		$handle = fopen($this->filename, 'a');
+		// $handle = fopen($this->filename, 'a');
+
+		// $this->handle;
 
 		$logFormat = date("Y-m-d H:i:s") . "[" . $logLevel . "]" . $message . PHP_EOL; 
 
-		fwrite($handle, $logFormat);
+		fwrite($this->handle, $logFormat);
 
-		fclose($handle);
+		// fclose($handle);
 
 	}
 
