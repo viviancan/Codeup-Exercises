@@ -8,7 +8,7 @@ class Log
 
 	public $handle; 
 
-	public function _construct($prefix = "log")
+	public function __construct($prefix = "log")
 	{
 		$this->filename = $prefix . date("-Y-m-d") . ".log";
 
@@ -16,7 +16,7 @@ class Log
 
 	}
 
-	public function _destruct()
+	public function __destruct()
 	{
 		fclose($this->handle);
 	}
