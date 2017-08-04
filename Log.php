@@ -6,6 +6,8 @@ class Log
 
 	public $filename; 
 
+	public $handle; 
+
 	public function logMessage($logLevel, $message)
 	{
 		$this->filename = "log" . date("-Y-m-d") . ".log";
