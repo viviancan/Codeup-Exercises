@@ -20,7 +20,6 @@ class Rectangle
 
 	public function area() {
 		$area = ($this->height * $this->width);
-		echo "The area is " . $area . PHP_EOL;
 		return $area; 
 
 	}
