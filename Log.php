@@ -4,12 +4,17 @@
 class Log
 {
 
-	public $filename; 
+	private $filename; 
 
-	public $handle; 
+	private $handle; 
 
 	public function __construct($prefix = "log")
 	{
+
+		if(!is_string($prefix)){
+			$prefix = "log";
+		}
+
 		$this->filename = $prefix . date("-Y-m-d") . ".log";
 
 		$this->handle = fopen($this->filename, 'a');
@@ -21,19 +26,12 @@ class Log
 		fclose($this->handle);
 	}
 
-	public function logMessage($logLevel, $message)
+	protected function logMessage($logLevel, $message)
 	{
-		// $this->filename = "log" . date("-Y-m-d") . ".log";
-
-		// $handle = fopen($this->filename, 'a');
-
-		// $this->handle;
 
 		$logFormat = date("Y-m-d H:i:s") . "[" . $logLevel . "]" . $message . PHP_EOL; 
 
 		fwrite($this->handle, $logFormat);
-
-		// fclose($handle);
 
 	}
 
@@ -59,3 +57,6 @@ class Log
 
 
  ?>
+
+
+
