@@ -1,8 +1,8 @@
 <?php 
 
 
-require_once "Model.php";
-require_once "User.php";
+require_once __DIR__ . "/Model.php";
+require_once __DIR__ . "/User.php";
 
 
 // $data = new Model();
@@ -12,7 +12,12 @@ require_once "User.php";
 
 // var_dump($data);
 
-echo User::getTableName();
+// $user = new User();
+// $user->username = "bobbytables";
+// $user->password = "password123!";
+
+echo "The table that stores users is " .
+User::getTableName();
 
 
 

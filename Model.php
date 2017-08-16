@@ -4,7 +4,7 @@
 class Model 
 {
 
-	protected static $table; 
+	protected static $table = ""; 
 
 	private $data = []; 
 
